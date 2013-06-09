@@ -1,0 +1,30 @@
+class Network
+{
+    Chip [][] net;
+    public Network()
+    {
+        net = new Chip[8][8];
+    }
+    public Network(Network n)
+    {
+        net = n;
+    }
+    public boolean isValidMove(Chip i, int x, int y)
+    {
+        if ((x == 0 || x == 7) && (y == 0 || y == 7))
+        {
+            return false;
+        }
+        else if (i.col() == Chip.BLACK && (x == 0 || x == 7))
+        {
+            return false;
+        }
+        else if (i.col() == Chip.WHITE && (y == 0 || y == 7))
+        {
+            return false;
+        }
+        else if (net[x][y] != null)
+        {
+            return false;
+        }
+        else if ( 

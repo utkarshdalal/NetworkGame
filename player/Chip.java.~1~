@@ -1,0 +1,21 @@
+class Chip
+{
+    static final boolean BLACK = 0;
+    static final boolean WHITE = 1;
+    public boolean colour;
+    public int x;
+    public int y;
+    public boolean isConnected = 0;
+
+    public Chip(boolean col, int x1, int y1)
+    {
+        colour = col;
+        x = x1;
+        y = y1;
+    }
+    
+    public void connect()
+    {
+        isConnected=1;
+    }
+}
